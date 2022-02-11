@@ -1,0 +1,67 @@
+@import "_variables";
+@import "_mixins";
+@import "_component";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+header,
+main,
+div {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $color-font-body;
+}
+.roboto-con {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+header {
+  max-width: 1296px;
+  height: 83px;
+  display: flex;
+  justify-content: space-between;
+
+  .header_logo_overlay {
+    width: 161px;
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      position: absolute;
+    }
+  }
+  .header_menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .header_nav ul {
+      width: 100%;
+      display: flex;
+    }
+
+    .header_dial {
+      @extend %dial;
+    }
+  }
+}
+
+.container {
+  max-width: 1079px;
+}

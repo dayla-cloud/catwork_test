@@ -1,0 +1,27 @@
+%dial {
+  margin-left: 15px;
+  width: 195px;
+  height: 63px;
+  background-color: $color-orange;
+  border-radius: 0 0 15px 15px;
+  color: $color-white;
+  text-align: center;
+  p {
+    font-size: $font-size-header-dial-jp;
+    font-weight: $font-weight-medium;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    img {
+      width: 17px;
+      height: 17px;
+    }
+    p {
+      font-size: $font-size-header-dial-numb;
+    }
+  }
+}
