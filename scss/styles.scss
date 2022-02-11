@@ -4,20 +4,20 @@
 @import "_component";
 
 body {
+  @extend %fontNormal;
   width: 100%;
   height: 100vh;
-  font-family: "Noto Sans JP", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-
+.font_other {
+  @extend %fontOther;
+}
 main {
   margin: 0 auto;
 }
-
 a {
   color: $color-font-body;
 }
-
 header {
   width: 100%;
   height: 83px;
@@ -56,22 +56,12 @@ header {
         text-align: center;
 
         li {
-          a p:first-child {
-            font-size: $font-size-header-en;
-            font-weight: $font-weight-medium;
-            color: $color-font-header-en;
-            text-transform: uppercase;
-          }
-          a p:last-child {
-            font-size: $font-size-header-jp;
-            font-weight: $font-weight-regular;
-            color: $color-font-header-jp;
-          }
+          @extend %headerMenu;
         }
       }
 
       .header_dial {
-        @extend %dial;
+        @extend %headerDial;
         align-self: flex-start;
       }
     }
@@ -94,9 +84,24 @@ header {
     transform: translate(50% 50%);
     margin-left: -259.5px;
     margin-top: -88.5px;
+
+    img {
+      width: 519px;
+      margin-bottom: 29px;
+    }
     p {
       font-size: $font-size-lp;
+      font-weight: $font-weight-regular;
       color: $color-white;
+    }
+    .landing_page_arrow {
+      height: 26.69px;
+      width: 53.38px;
+      position: inherit;
+      top: 50%;
+      left: 50%;
+      margin-top: 273px;
+      transform: translate(50% 50%);
     }
   }
 }
@@ -105,6 +110,7 @@ header {
   max-width: 1296px;
   margin: auto;
   padding-top: 24px;
+  padding-bottom: 91px;
   position: relative;
 
   ul {
@@ -112,8 +118,9 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-align: center;
-    text-transform: uppercase;
+    li {
+      @extend %menuShortcutUnderLP;
+    }
   }
 
   .menu_shortcut_social {
@@ -122,18 +129,8 @@ header {
     display: flex;
     gap: 10px;
     a {
-      width: 32px;
-      height: 32px;
-      padding: 7px;
-      border-radius: 50%;
-      background-color: $color-icon-background-social;
-      display: flex;
-      place-content: center center;
-      &:first-child img {
-        height: 18px;
-      }
-
-      &:last-child img {
+      @extend %socialLink;
+      img {
         height: 15px;
       }
     }
@@ -142,4 +139,65 @@ header {
 
 .container {
   max-width: 1079px;
+  margin: auto;
+}
+
+.home_title {
+  @extend %homeTitle;
+}
+#about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-font-about-us;
+  .point_card_list {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    margin-top: 18px;
+    margin-bottom: 108px;
+    row-gap: 70px;
+    .point_card {
+      align-self: center;
+      justify-self: center;
+      position: relative;
+      .point_card_balloon {
+        @extend %pointBalloon;
+      }
+      img {
+        position: absolute;
+      }
+
+      &:first-child {
+        img {
+          width: 115px;
+          left: -58px;
+          bottom: -67px;
+        }
+      }
+      &:nth-child(2) {
+        img {
+          width: 113px;
+          left: -112px;
+          bottom: -43px;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          width: 80px;
+          left: -70px;
+          bottom: -14px;
+        }
+      }
+      &:last-child {
+        img {
+          width: 168px;
+          left: -102px;
+          bottom: -16px;
+        }
+      }
+    }
+  }
+  .btn_more {
+    @include buttonMore("transparent");
+  }
 }

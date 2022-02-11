@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Oswald:wght@300;400;500;600;700&display=swap");
 html,
 body,
 body div,
@@ -318,6 +318,28 @@ input[type=button] {
 
 /* color */
 /* font */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.font_other {
+  font-family: "Oswald", sans-serif;
+}
+
+header .header_wrapper .header_menu .header_nav ul li a p:first-child {
+  font-size: 0.825rem;
+  font-weight: 400;
+  color: #242424;
+  text-transform: uppercase;
+}
+header .header_wrapper .header_menu .header_nav ul li a p:last-child {
+  font-size: 0.625rem;
+  font-weight: 300;
+  color: #949494;
+}
+
 header .header_wrapper .header_menu .header_dial {
   margin-left: 15px;
   width: 195px;
@@ -345,10 +367,73 @@ header .header_wrapper .header_menu .header_dial div p {
   font-size: 1.5rem;
 }
 
+.home_title {
+  text-align: center;
+}
+.home_title h1 {
+  font-size: 3.9rem;
+  font-weight: 500;
+  color: #f39800;
+  letter-spacing: 3px;
+}
+.home_title span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #818181;
+}
+
+.menu_shortcut ul li {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+
+.menu_shortcut .menu_shortcut_social a {
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  display: flex;
+  place-content: center center;
+}
+
+#about-us .point_card_list .point_card .point_card_balloon {
+  width: 394px;
+  height: 394px;
+  background-image: url(../asset/SVG/illu-point.svg);
+  display: flex;
+  flex-direction: column;
+  padding: 58px 30px;
+  text-align: center;
+}
+#about-us .point_card_list .point_card .point_card_balloon span {
+  font-size: 1.56rem;
+  line-height: 1.56rem;
+  font-weight: 400;
+  margin-bottom: 54px;
+}
+#about-us .point_card_list .point_card .point_card_balloon h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 46px;
+}
+#about-us .point_card_list .point_card .point_card_balloon h4 span {
+  text-decoration: underline;
+  text-decoration-color: rgba(243, 152, 0, 0.2);
+  text-decoration-thickness: 6px;
+}
+#about-us .point_card_list .point_card .point_card_balloon p {
+  line-height: 1.8125rem;
+  max-width: 270px;
+  display: block;
+  margin: auto;
+}
+
 body {
   width: 100%;
   height: 100vh;
-  font-family: "Noto Sans JP", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -400,17 +485,6 @@ header .header_wrapper .header_menu .header_nav ul {
   gap: 25px;
   text-align: center;
 }
-header .header_wrapper .header_menu .header_nav ul li a p:first-child {
-  font-size: 0.825rem;
-  font-weight: 400;
-  color: #242424;
-  text-transform: uppercase;
-}
-header .header_wrapper .header_menu .header_nav ul li a p:last-child {
-  font-size: 0.625rem;
-  font-weight: 300;
-  color: #949494;
-}
 header .header_wrapper .header_menu .header_dial {
   align-self: flex-start;
 }
@@ -433,15 +507,30 @@ header .header_wrapper .header_menu .header_dial {
   margin-left: -259.5px;
   margin-top: -88.5px;
 }
+.landing_page_wrapper .landing_page_logo img {
+  width: 519px;
+  margin-bottom: 29px;
+}
 .landing_page_wrapper .landing_page_logo p {
   font-size: 2rem;
+  font-weight: 300;
   color: white;
+}
+.landing_page_wrapper .landing_page_logo .landing_page_arrow {
+  height: 26.69px;
+  width: 53.38px;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  margin-top: 273px;
+  transform: translate(50% 50%);
 }
 
 .menu_shortcut {
   max-width: 1296px;
   margin: auto;
   padding-top: 24px;
+  padding-bottom: 91px;
   position: relative;
 }
 .menu_shortcut ul {
@@ -449,8 +538,6 @@ header .header_wrapper .header_menu .header_dial {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  text-align: center;
-  text-transform: uppercase;
 }
 .menu_shortcut .menu_shortcut_social {
   position: absolute;
@@ -458,24 +545,63 @@ header .header_wrapper .header_menu .header_dial {
   display: flex;
   gap: 10px;
 }
-.menu_shortcut .menu_shortcut_social a {
-  width: 32px;
-  height: 32px;
-  padding: 7px;
-  border-radius: 50%;
-  background-color: #e8e8e8;
-  display: flex;
-  place-content: center center;
-}
-.menu_shortcut .menu_shortcut_social a:first-child img {
-  height: 18px;
-}
-.menu_shortcut .menu_shortcut_social a:last-child img {
+.menu_shortcut .menu_shortcut_social a img {
   height: 15px;
 }
 
 .container {
   max-width: 1079px;
+  margin: auto;
+}
+
+#about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333333;
+}
+#about-us .point_card_list {
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  margin-top: 18px;
+  margin-bottom: 108px;
+  row-gap: 70px;
+}
+#about-us .point_card_list .point_card {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+}
+#about-us .point_card_list .point_card img {
+  position: absolute;
+}
+#about-us .point_card_list .point_card:first-child img {
+  width: 115px;
+  left: -58px;
+  bottom: -67px;
+}
+#about-us .point_card_list .point_card:nth-child(2) img {
+  width: 113px;
+  left: -112px;
+  bottom: -43px;
+}
+#about-us .point_card_list .point_card:nth-child(3) img {
+  width: 80px;
+  left: -70px;
+  bottom: -14px;
+}
+#about-us .point_card_list .point_card:last-child img {
+  width: 168px;
+  left: -102px;
+  bottom: -16px;
+}
+#about-us .btn_more {
+  width: 299px;
+  height: 46px;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  margin: auto;
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */

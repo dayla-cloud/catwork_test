@@ -1,9 +1,12 @@
-// font-family
-@mixin roboto($font-weight) {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: $font-weight;
-}
-
-@mixin notosans() {
-  font-family: "Noto Sans JP", sans-serif;
+@mixin buttonMore($backgroundColor) {
+  width: 299px;
+  height: 46px;
+  border: 1px solid $color-orange;
+  border-radius: 8px;
+  margin: auto;
+  @if$backgroundColor == "orange" {
+    background-color: $color-orange;
+  } @else {
+    background-color: transparent;
+  }
 }
