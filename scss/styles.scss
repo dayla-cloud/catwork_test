@@ -11,17 +11,11 @@ body {
 }
 
 main {
-  margin: auto;
+  margin: 0 auto;
 }
 
-li {
-  list-style: none;
-}
 a {
   color: $color-font-body;
-}
-.roboto-con {
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 header {
@@ -38,7 +32,7 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    .header_logo_overlay {
+    .header_logo {
       width: 161px;
       height: 55px;
       overflow: hidden;
@@ -84,11 +78,68 @@ header {
   }
 }
 
-.container {
-  max-width: 1079px;
+.landing_page_wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: 1063px;
+  overflow: hidden;
+  background-image: url(../asset/png/lp.png);
+  background-size: cover;
+  position: relative;
+  .landing_page_logo {
+    width: 519px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50% 50%);
+    margin-left: -259.5px;
+    margin-top: -88.5px;
+    p {
+      font-size: $font-size-lp;
+      color: $color-white;
+    }
+  }
 }
 
-main {
-  height: 1000px;
-  background-color: tomato;
+.menu_shortcut {
+  max-width: 1296px;
+  margin: auto;
+  padding-top: 24px;
+  position: relative;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .menu_shortcut_social {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    a {
+      width: 32px;
+      height: 32px;
+      padding: 7px;
+      border-radius: 50%;
+      background-color: $color-icon-background-social;
+      display: flex;
+      place-content: center center;
+      &:first-child img {
+        height: 18px;
+      }
+
+      &:last-child img {
+        height: 15px;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1079px;
 }
