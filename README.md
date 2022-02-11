@@ -1,3 +1,7 @@
-# catwork_test
+## catwork_test
 
-test
+#22.02.11
+
+- 誤字の処理はどうすればいいのか。（dictor, infomation）
+- PS でのフォント PT とコーディングでの PT サイズの差は DPI を 96 に再設定しても治らず。
+- 72dpi 時に横幅が 1920px なので恐らく 72dpi での作業の方が PX サイズは合ってるはず、だがフォントは px→rem にしても良いのかまだ解決できない

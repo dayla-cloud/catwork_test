@@ -1,12 +1,65 @@
 @mixin buttonMore($backgroundColor) {
+  font-size: $font-size-more;
+  font-weight: $font-weight-medium;
+  line-height: $font-size-more;
   width: 299px;
-  height: 46px;
+  min-width: 299px;
+  padding: 16px 0;
+  margin: auto;
   border: 1px solid $color-orange;
   border-radius: 8px;
-  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+
   @if$backgroundColor == "orange" {
     background-color: $color-orange;
   } @else {
     background-color: transparent;
+  }
+}
+
+@mixin iconCircle($type) {
+  border-radius: 50%;
+  display: flex;
+  place-content: center center;
+
+  @if $type == "social" {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    background-color: $color-icon-background-social;
+  } @else if $type == "icon" {
+    width: 70px;
+    height: 70px;
+    padding: 17px;
+    background-color: $color-orange;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(50% 50%);
+    margin-top: -35px;
+    margin-left: -35px;
+  } @else if $type == "access" {
+    width: 87px;
+    height: 87px;
+    padding: 22px;
+    background-color: $color-icon-background-access;
+  }
+}
+
+@mixin btnKochira {
+  width: 400px;
+  min-width: 400px;
+  padding: 23px 0;
+  border: 1px solid $color-orange;
+  border-radius: 8px;
+  text-align: center;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  img {
+    width: 27px;
   }
 }
