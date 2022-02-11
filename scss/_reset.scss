@@ -245,6 +245,11 @@ td img {
   vertical-align: top;
 }
 
+img,
+video {
+  width: 100%;
+}
+
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
 sub,
 sup {

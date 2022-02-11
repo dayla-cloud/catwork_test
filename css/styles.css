@@ -251,6 +251,11 @@ td img {
   vertical-align: top;
 }
 
+img,
+video {
+  width: 100%;
+}
+
 /* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
 sub,
 sup {
@@ -365,21 +370,6 @@ header .header_wrapper .header_menu .header_dial div img {
 }
 header .header_wrapper .header_menu .header_dial div p {
   font-size: 1.5rem;
-}
-
-.home_title {
-  text-align: center;
-}
-.home_title h1 {
-  font-size: 3.9rem;
-  font-weight: 500;
-  color: #f39800;
-  letter-spacing: 3px;
-}
-.home_title span {
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #818181;
 }
 
 .menu_shortcut ul li {
@@ -553,6 +543,21 @@ header .header_wrapper .header_menu .header_dial {
   margin: auto;
 }
 
+.home_title_big {
+  text-align: center;
+}
+.home_title_big span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #818181;
+}
+.home_title_big h1 {
+  font-size: 3.9rem;
+  font-weight: 500;
+  color: #f39800;
+  letter-spacing: 3px;
+}
+
 #about-us {
   display: flex;
   flex-direction: column;
@@ -665,6 +670,67 @@ header .header_wrapper .header_menu .header_dial {
 }
 #inform .btns .btn_kochira img {
   width: 27px;
+}
+
+.full_width_devided {
+  width: 100%;
+  height: 570px;
+  margin-top: 72px;
+  margin-bottom: 92px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  overflow: hidden;
+}
+.full_width_devided #staff-and-schedule {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  margin-left: -539.5px;
+  margin-top: -144.5px;
+  transform: translate(50% 50%);
+}
+.full_width_devided #staff-and-schedule a {
+  width: 465px;
+  height: 289px;
+  border-radius: 10px;
+  background-color: white;
+  background-image: repeating-linear-gradient(-45deg, white 0, white 2px, black 2px, black 4px);
+  position: relative;
+  text-align: center;
+}
+.full_width_devided #staff-and-schedule a .icon_circle {
+  border-radius: 50%;
+  display: flex;
+  place-content: center center;
+  width: 70px;
+  height: 70px;
+  padding: 17px;
+  background-color: #f39800;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(50% 50%);
+  margin-top: -35px;
+  margin-left: -35px;
+}
+.full_width_devided #staff-and-schedule a .home_title_small {
+  text-align: center;
+}
+.full_width_devided #staff-and-schedule a .home_title_small span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #818181;
+}
+.full_width_devided #staff-and-schedule a .home_title_small h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #f39800;
+  letter-spacing: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */
