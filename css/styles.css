@@ -329,7 +329,7 @@ body {
   font-weight: 300;
 }
 
-#album .album_social, #album .home_title_big h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small h2, #inform .home_title_big h1, #about-us .btn_more, #about-us .home_title_big h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
+#album .album_social, #album .home_title_big h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title_big h1, #about-us .btn_more, #about-us .home_title_big h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-family: "Oswald", sans-serif;
 }
 
@@ -414,6 +414,7 @@ body {
   width: 100%;
   height: 100vh;
   -webkit-text-size-adjust: 100%;
+  text-align: center;
 }
 
 main {
@@ -463,7 +464,6 @@ header .header_wrapper .header_menu .header_nav ul {
   margin-top: 11px;
   display: flex;
   gap: 25px;
-  text-align: center;
 }
 header .header_wrapper .header_menu .header_dial {
   align-self: flex-start;
@@ -549,25 +549,18 @@ header .header_wrapper .header_menu .header_dial {
   justify-content: center;
   color: #333333;
 }
-#about-us .home_title_big {
-  text-align: center;
-}
 #about-us .home_title_big h1 {
-  font-size: 3.9rem;
-  line-height: 3.9rem;
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
 }
 #about-us .home_title_big span {
   font-size: 0.875rem;
   font-weight: 300;
-}
-#about-us .home_title_big h1 {
-  color: #f39800;
-}
-#about-us .home_title_big span {
   color: #818181;
 }
 #about-us .point_card_list {
@@ -648,25 +641,18 @@ header .header_wrapper .header_menu .header_dial {
   margin-top: -35px;
   margin-left: -35px;
 }
-#inform .home_title_big {
-  text-align: center;
-}
 #inform .home_title_big h1 {
-  font-size: 3.9rem;
-  line-height: 3.9rem;
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
 }
 #inform .home_title_big span {
   font-size: 0.875rem;
   font-weight: 300;
-}
-#inform .home_title_big h1 {
-  color: #f39800;
-}
-#inform .home_title_big span {
   color: #818181;
 }
 #inform ul {
@@ -674,7 +660,6 @@ header .header_wrapper .header_menu .header_dial {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 20px;
   gap: 10px;
-  text-align: center;
   margin: 34px 0 76px;
 }
 #inform .btns {
@@ -741,7 +726,6 @@ header .header_wrapper .header_menu .header_dial {
   width: 465px;
   height: 289px;
   position: relative;
-  text-align: center;
 }
 .full_width_devided #staff-and-schedule .card_stripe .icon_circle {
   border-radius: 50%;
@@ -767,16 +751,16 @@ header .header_wrapper .header_menu .header_dial {
   flex-direction: column;
   justify-content: space-between;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small h2 {
-  font-size: 2.4rem;
-  line-height: 2.4rem;
+.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1 {
   font-weight: 400;
-  text-transform: uppercase;
   color: #f39800;
   letter-spacing: 3px;
-  white-space: nowrap;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small span {
+.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
@@ -821,25 +805,19 @@ header .header_wrapper .header_menu .header_dial {
   gap: 22px;
   padding: 42px;
 }
-#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big {
-  text-align: center;
-}
 #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1 {
-  font-size: 3.9rem;
-  line-height: 3.9rem;
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+  color: white;
 }
 #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big span {
   font-size: 0.875rem;
   font-weight: 300;
-}
-#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1 {
-  color: white;
-}
-#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big span {
   color: white;
 }
 #mushiba .mushiba_border_wrapper .mushiba_border .mushiba_border_icon {
@@ -866,29 +844,23 @@ header .header_wrapper .header_menu .header_dial {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 15px;
 }
 #album .home_title_big {
-  text-align: center;
   position: relative;
 }
 #album .home_title_big h1 {
-  font-size: 3.9rem;
-  line-height: 3.9rem;
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 2.375rem;
+  line-height: 2.375rem;
 }
 #album .home_title_big span {
   font-size: 0.875rem;
   font-weight: 300;
-}
-#album .home_title_big h1 {
-  color: #f39800;
-}
-#album .home_title_big span {
   color: #818181;
 }
 #album .home_title_big img {
