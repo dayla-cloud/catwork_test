@@ -9,6 +9,7 @@
 
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
+/* 220212 Sooyeon : add address, destroy font-weight */
 
 html,
 body,
@@ -80,7 +81,6 @@ summary {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-weight: normal;
   vertical-align: baseline;
   background: transparent;
 }
@@ -313,4 +313,8 @@ input[type="button"] {
   content: " ";
   display: block;
   clear: both;
+}
+
+address {
+  font-style: normal;
 }

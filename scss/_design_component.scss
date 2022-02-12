@@ -84,7 +84,6 @@
       black 9px
     );
   } @else {
-    border: 10px solid $color-white;
     border-image: repeating-linear-gradient(
         -45deg,
         $color-white 0,

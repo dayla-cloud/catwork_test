@@ -339,6 +339,7 @@ header {
     .mushiba_border {
       color: $color-white;
       @include Stripe("border");
+      border: 10px solid $color-white;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -572,6 +573,13 @@ header {
 
 .full_width_clinic_hours {
   height: 1053px;
+  min-height: 1053px;
+  padding-top: 122px;
+  background-color: $color-clinic-hours-backgroudnd-clor;
+  border-color: $color-white;
+  border-style: solid;
+  border-width: 0 0 10px 0;
+  @include Stripe("border");
   #clinic-hours {
     & > img {
       width: 46px;
@@ -585,15 +593,20 @@ header {
         @include homeSubtitle("gray");
       }
     }
-    .clinic_hour_time_description {
+    .clinic_hours_time_description {
+      margin: 17px 0 68px;
       font-size: $font-size-clinichours-time-description;
       font-weight: $font-weight-bold;
     }
-
     table {
+      margin: 0 auto;
       width: calc(100% - 150px);
       border-collapse: collapse;
       font-weight: $font-weight-bold;
+      caption {
+        margin-top: 37px;
+        caption-side: bottom;
+      }
       &,
       td,
       th {
@@ -608,9 +621,13 @@ header {
         background-color: $color-orange;
         color: $color-white;
       }
+      tbody {
+        background-color: $color-white;
+      }
     }
 
     .clinic_hours_dials {
+      margin: 62px 0 50px;
       width: 100%;
       display: flex;
       justify-content: space-around;
@@ -631,6 +648,50 @@ header {
     }
     .btn_kochira {
       @include buttonKochira;
+    }
+  }
+}
+
+#access {
+  margin: 90px auto 150px;
+  .home_title {
+    h1 {
+      @include homeTitle("big");
+    }
+    span {
+      @include homeSubtitle("gray");
+    }
+  }
+  .access_information {
+    margin-top: 45px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .access_information_image_wrapper {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      background-image: url(../asset/png/access.png);
+      background-size: cover;
+    }
+    .access_information_description {
+      padding: 30px 60px;
+      text-align: left;
+      font-size: $font-size-access-description;
+      font-weight: $font-weight-bold;
+      .access_information_description_address {
+        margin-bottom: 40px;
+      }
+      .access_information_description_transport {
+        display: flex;
+        margin-bottom: 22px;
+        gap: 12px;
+        align-items: center;
+        .icon_circle {
+          @include iconCircle("access");
+        }
+      }
     }
   }
 }

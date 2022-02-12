@@ -8,6 +8,7 @@
 -------------------------------------------------------------------------------*/
 /* Let's default this puppy out
 -------------------------------------------------------------------------------*/
+/* 220212 Sooyeon : add address, destroy font-weight */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Oswald:wght@300;400;500;600;700&display=swap");
 html,
 body,
@@ -79,7 +80,6 @@ summary {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-weight: normal;
   vertical-align: baseline;
   background: transparent;
 }
@@ -322,6 +322,10 @@ input[type=button] {
   clear: both;
 }
 
+address {
+  font-style: normal;
+}
+
 /* color */
 /* font */
 body {
@@ -330,7 +334,7 @@ body {
   font-weight: 300;
 }
 
-.full_width_clinic_hours #clinic-hours .home_title h1, .full_width_recruit #recruit .btn_more, #blog .btn_more, #blog .home_title h1, .full_width_new_topic #news-and-topics .btn_more, .full_width_new_topic #news-and-topics .home_title h1, #album .album_social, #album .home_title h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title h1, .full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title h1, #about-us .btn_more, #about-us .home_title h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
+#access .home_title h1, .full_width_clinic_hours #clinic-hours .home_title h1, .full_width_recruit #recruit .btn_more, #blog .btn_more, #blog .home_title h1, .full_width_new_topic #news-and-topics .btn_more, .full_width_new_topic #news-and-topics .home_title h1, #album .album_social, #album .home_title h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title h1, .full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title h1, #about-us .btn_more, #about-us .home_title h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-family: "Oswald", sans-serif;
 }
 
@@ -796,8 +800,8 @@ header .header_wrapper .header_menu .header_dial {
   color: white;
   width: 100%;
   height: 100%;
-  border: 10px solid white;
   border-image: repeating-linear-gradient(-45deg, white 0, white 7px, black 7px, black 9px) 10;
+  border: 10px solid white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1094,6 +1098,15 @@ header .header_wrapper .header_menu .header_dial {
 
 .full_width_clinic_hours {
   height: 1053px;
+  min-height: 1053px;
+  padding-top: 122px;
+  background-color: #f2f2f2;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 0 10px 0;
+  width: 100%;
+  height: 100%;
+  border-image: repeating-linear-gradient(-45deg, white 0, white 7px, black 7px, black 9px) 10;
 }
 .full_width_clinic_hours #clinic-hours > img {
   width: 46px;
@@ -1112,14 +1125,20 @@ header .header_wrapper .header_menu .header_dial {
   font-weight: 300;
   color: #818181;
 }
-.full_width_clinic_hours #clinic-hours .clinic_hour_time_description {
+.full_width_clinic_hours #clinic-hours .clinic_hours_time_description {
+  margin: 17px 0 68px;
   font-size: 1.125rem;
   font-weight: 500;
 }
 .full_width_clinic_hours #clinic-hours table {
+  margin: 0 auto;
   width: calc(100% - 150px);
   border-collapse: collapse;
   font-weight: 500;
+}
+.full_width_clinic_hours #clinic-hours table caption {
+  margin-top: 37px;
+  caption-side: bottom;
 }
 .full_width_clinic_hours #clinic-hours table,
 .full_width_clinic_hours #clinic-hours table td,
@@ -1135,7 +1154,11 @@ header .header_wrapper .header_menu .header_dial {
   background-color: #f39800;
   color: white;
 }
+.full_width_clinic_hours #clinic-hours table tbody {
+  background-color: white;
+}
 .full_width_clinic_hours #clinic-hours .clinic_hours_dials {
+  margin: 62px 0 50px;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -1170,6 +1193,62 @@ header .header_wrapper .header_menu .header_dial {
 }
 .full_width_clinic_hours #clinic-hours .btn_kochira img {
   width: 27px;
+}
+
+#access {
+  margin: 90px auto 150px;
+}
+#access .home_title h1 {
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+}
+#access .home_title span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #818181;
+}
+#access .access_information {
+  margin-top: 45px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#access .access_information .access_information_image_wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url(../asset/png/access.png);
+  background-size: cover;
+}
+#access .access_information .access_information_description {
+  padding: 30px 60px;
+  text-align: left;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+#access .access_information .access_information_description .access_information_description_address {
+  margin-bottom: 40px;
+}
+#access .access_information .access_information_description .access_information_description_transport {
+  display: flex;
+  margin-bottom: 22px;
+  gap: 12px;
+  align-items: center;
+}
+#access .access_information .access_information_description .access_information_description_transport .icon_circle {
+  border-radius: 50%;
+  display: flex;
+  place-content: center center;
+  width: 87px;
+  height: 87px;
+  padding: 22px;
+  background-color: #f5f5f5;
 }
 
 /*# sourceMappingURL=styles.css.map */
