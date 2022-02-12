@@ -1,22 +1,24 @@
 @mixin buttonMore($backgroundColor) {
   @extend %fontOther;
-
   font-size: $font-size-more;
   font-weight: $font-weight-medium;
   line-height: $font-size-more;
   width: 299px;
   min-width: 299px;
   padding: 16px 0;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid $color-orange;
   border-radius: 8px;
   text-align: center;
   vertical-align: middle;
 
-  @if$backgroundColor == "orange" {
+  @if ($backgroundColor == "orange") {
     background-color: $color-orange;
-  } @else {
+  } @else if($backgroundColor == "transparent") {
     background-color: transparent;
+  } @else if($backgroundColor == "withoutBorder") {
+    background-color: transparent;
+    border: 0;
   }
 }
 

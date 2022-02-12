@@ -158,6 +158,7 @@ a {
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
+  cursor: pointer;
 }
 
 del {
@@ -329,7 +330,7 @@ body {
   font-weight: 300;
 }
 
-#album .album_social, #album .home_title_big h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title_big h1, #about-us .btn_more, #about-us .home_title_big h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
+.full_width_image #recruit .btn_more, #blog .btn_more, #blog .home_title h1, .full_width_gray #news-and-topics .btn_more, .full_width_gray #news-and-topics .home_title h1, #album .album_social, #album .home_title h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title h1, #about-us .btn_more, #about-us .home_title h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-family: "Oswald", sans-serif;
 }
 
@@ -451,6 +452,8 @@ header .header_wrapper .header_logo {
 }
 header .header_wrapper .header_logo img {
   width: 100%;
+  left: 0;
+  top: 0;
   position: absolute;
 }
 header .header_wrapper .header_menu {
@@ -508,9 +511,7 @@ header .header_wrapper .header_menu .header_dial {
 
 .menu_shortcut {
   max-width: 1296px;
-  margin: auto;
-  padding-top: 24px;
-  padding-bottom: 91px;
+  margin: 24px auto 0;
   position: relative;
 }
 .menu_shortcut ul {
@@ -544,12 +545,13 @@ header .header_wrapper .header_menu .header_dial {
 }
 
 #about-us {
+  padding: 91px 0 118px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #333333;
 }
-#about-us .home_title_big h1 {
+#about-us .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
@@ -558,7 +560,7 @@ header .header_wrapper .header_menu .header_dial {
   font-size: 3.9rem;
   line-height: 3.9rem;
 }
-#about-us .home_title_big span {
+#about-us .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
@@ -605,7 +607,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 299px;
   min-width: 299px;
   padding: 16px 0;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid #f39800;
   border-radius: 8px;
   text-align: center;
@@ -617,7 +619,6 @@ header .header_wrapper .header_menu .header_dial {
   width: 1080px;
   height: 403px;
   border-radius: 10px;
-  margin-top: 118px;
   padding: 43px 82px;
   display: flex;
   flex-direction: column;
@@ -641,7 +642,7 @@ header .header_wrapper .header_menu .header_dial {
   margin-top: -35px;
   margin-left: -35px;
 }
-#inform .home_title_big h1 {
+#inform .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
@@ -650,7 +651,7 @@ header .header_wrapper .header_menu .header_dial {
   font-size: 3.9rem;
   line-height: 3.9rem;
 }
-#inform .home_title_big span {
+#inform .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
@@ -690,7 +691,6 @@ header .header_wrapper .header_menu .header_dial {
   min-height: 570px;
   max-height: 570px;
   margin-top: 72px;
-  margin-bottom: 92px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
@@ -746,7 +746,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 100%;
   height: 100%;
   background-color: white;
-  padding: 60px;
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -757,22 +757,21 @@ header .header_wrapper .header_menu .header_dial {
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 9px;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
+  font-size: 3.125rem;
+  line-height: 3.125rem;
+  white-space: nowrap;
 }
 .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background p {
-  word-break: keep-all;
-}
 
 #mushiba {
   height: 408px;
   border-radius: 10px;
   position: relative;
+  margin-top: 92px;
 }
 #mushiba .mushiba_img_wrapper {
   width: 100%;
@@ -805,7 +804,7 @@ header .header_wrapper .header_menu .header_dial {
   gap: 22px;
   padding: 42px;
 }
-#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1 {
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
@@ -815,7 +814,7 @@ header .header_wrapper .header_menu .header_dial {
   line-height: 3.9rem;
   color: white;
 }
-#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big span {
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: white;
@@ -830,7 +829,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 299px;
   min-width: 299px;
   padding: 16px 0;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid #f39800;
   border-radius: 8px;
   text-align: center;
@@ -839,31 +838,31 @@ header .header_wrapper .header_menu .header_dial {
 }
 
 #album {
-  margin-top: 130px;
+  padding: 130px 0 93px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
-#album .home_title_big {
+#album .home_title {
   position: relative;
 }
-#album .home_title_big h1 {
+#album .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 9px;
-  font-size: 2.375rem;
-  line-height: 2.375rem;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
 }
-#album .home_title_big span {
+#album .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
 }
-#album .home_title_big img {
+#album .home_title .absolute_illust {
   width: 150px;
   position: absolute;
   top: 6px;
@@ -894,6 +893,202 @@ header .header_wrapper .header_menu .header_dial {
 }
 #album .gallery .gallery_image_wrapper {
   width: 257px;
+}
+
+.full_width_gray {
+  padding: 60px 0 39px;
+  width: 100%;
+  height: 362px;
+  position: relative;
+  background-color: #f2f2f2;
+  border-bottom: 7px solid #f39800;
+}
+.full_width_gray #news-and-topics .home_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+.full_width_gray #news-and-topics .home_title img {
+  width: 26px;
+}
+.full_width_gray #news-and-topics .home_title h1 {
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 2.375rem;
+  line-height: 2.375rem;
+}
+.full_width_gray #news-and-topics ul {
+  margin-top: 67px;
+}
+.full_width_gray #news-and-topics ul li {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.full_width_gray #news-and-topics ul li span {
+  color: #f39800;
+}
+.full_width_gray #news-and-topics .btn_more {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
+  width: 299px;
+  min-width: 299px;
+  padding: 16px 0;
+  margin: 0 auto;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 0;
+}
+.full_width_gray .absolute_illust {
+  width: 153px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: 274px;
+}
+
+#blog {
+  padding: 100px 0 134px;
+}
+#blog .home_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+#blog .home_title img {
+  width: 26px;
+}
+#blog .home_title h1 {
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 2.375rem;
+  line-height: 2.375rem;
+}
+#blog ul {
+  margin-top: 55px;
+  margin-bottom: 85px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 57px;
+}
+#blog ul li {
+  display: flex;
+  gap: 13px;
+}
+#blog ul li .blog_image_wrapper {
+  width: 107px;
+  min-width: 107px;
+  height: 107px;
+  min-height: 107px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+#blog ul li .blog_image_wrapper img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#blog ul li .blog_description {
+  width: 194px;
+  overflow: hidden;
+  text-align: left;
+}
+#blog ul li .blog_description span {
+  color: #f39800;
+}
+#blog .btn_more {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
+  width: 299px;
+  min-width: 299px;
+  padding: 16px 0;
+  margin: 0 auto;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 0;
+}
+
+.full_width_image {
+  width: 100%;
+  height: 610px;
+  min-height: 610px;
+  background-image: url(../asset/png/recruit.png);
+  background-size: cover;
+  background-position: center;
+}
+.full_width_image #recruit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.full_width_image #recruit h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+.full_width_image #recruit .recruit_card_list {
+  margin: 57px 0 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.full_width_image #recruit .recruit_card_list .recruit_card {
+  width: 504px;
+  height: 301px;
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 262px;
+  overflow: hidden;
+}
+.full_width_image #recruit .recruit_card_list .recruit_card .recruit_card_image_wrapper {
+  background-color: #f3f0e9;
+}
+.full_width_image #recruit .recruit_card_list .recruit_card article {
+  padding: 30px 46px 0px 21px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.full_width_image #recruit .recruit_card_list .recruit_card article h4 {
+  font-size: 1.3125rem;
+  line-height: 1.3125rem;
+}
+.full_width_image #recruit .recruit_card_list .recruit_card article span {
+  color: #f39800;
+}
+.full_width_image #recruit .btn_more {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
+  width: 299px;
+  min-width: 299px;
+  padding: 16px 0;
+  margin: 0 auto;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f39800;
 }
 
 /*# sourceMappingURL=styles.css.map */
