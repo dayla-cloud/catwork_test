@@ -60,16 +60,17 @@
   @if ($size == "big") {
     h1 {
       font-size: $font-size-section-title;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-medium;
       color: $color-orange;
       letter-spacing: 3px;
     }
   } @else if ($size == "small") {
     h2 {
       font-size: $font-size-section-title-smaller;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-medium;
       color: $color-orange;
       letter-spacing: 3px;
+      white-space: nowrap;
     }
   }
 }
