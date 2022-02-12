@@ -330,7 +330,7 @@ body {
   font-weight: 300;
 }
 
-.full_width_image #recruit .btn_more, #blog .btn_more, #blog .home_title h1, .full_width_gray #news-and-topics .btn_more, .full_width_gray #news-and-topics .home_title h1, #album .album_social, #album .home_title h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title h1, #about-us .btn_more, #about-us .home_title h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
+.full_width_clinic_hours #clinic-hours .home_title h1, .full_width_recruit #recruit .btn_more, #blog .btn_more, #blog .home_title h1, .full_width_new_topic #news-and-topics .btn_more, .full_width_new_topic #news-and-topics .home_title h1, #album .album_social, #album .home_title h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title h1, .full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title h1, #inform .home_title h1, #about-us .btn_more, #about-us .home_title h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-family: "Oswald", sans-serif;
 }
 
@@ -672,6 +672,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 400px;
   min-width: 400px;
   padding: 23px 0;
+  margin: 0 auto;
   border: 1px solid #f39800;
   border-radius: 8px;
   text-align: center;
@@ -685,7 +686,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 27px;
 }
 
-.full_width_devided {
+.full_width_staff_schedule {
   width: 100%;
   height: 570px;
   min-height: 570px;
@@ -696,15 +697,15 @@ header .header_wrapper .header_menu .header_dial {
   position: relative;
   overflow: hidden;
 }
-.full_width_devided .full_width_devided_background_left {
+.full_width_staff_schedule .full_width_devided_background_left {
   background-image: url(../asset/png/staff.png);
   background-size: cover;
 }
-.full_width_devided .full_width_devided_background_right {
+.full_width_staff_schedule .full_width_devided_background_right {
   background-image: url(../asset/png/doctorschedule.png);
   background-size: cover;
 }
-.full_width_devided #staff-and-schedule {
+.full_width_staff_schedule #staff-and-schedule {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -717,7 +718,7 @@ header .header_wrapper .header_menu .header_dial {
   margin-top: -285px;
   margin-left: -540px;
 }
-.full_width_devided #staff-and-schedule .card_stripe {
+.full_width_staff_schedule #staff-and-schedule .card_stripe {
   width: 100%;
   height: 100%;
   padding: 6px;
@@ -727,7 +728,7 @@ header .header_wrapper .header_menu .header_dial {
   height: 289px;
   position: relative;
 }
-.full_width_devided #staff-and-schedule .card_stripe .icon_circle {
+.full_width_staff_schedule #staff-and-schedule .card_stripe .icon_circle {
   border-radius: 50%;
   display: flex;
   place-content: center center;
@@ -742,7 +743,7 @@ header .header_wrapper .header_menu .header_dial {
   margin-top: -35px;
   margin-left: -35px;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background {
+.full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background {
   width: 100%;
   height: 100%;
   background-color: white;
@@ -751,7 +752,7 @@ header .header_wrapper .header_menu .header_dial {
   flex-direction: column;
   justify-content: space-between;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title h1 {
+.full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
@@ -761,7 +762,7 @@ header .header_wrapper .header_menu .header_dial {
   line-height: 3.125rem;
   white-space: nowrap;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title span {
+.full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
@@ -895,7 +896,7 @@ header .header_wrapper .header_menu .header_dial {
   width: 257px;
 }
 
-.full_width_gray {
+.full_width_new_topic {
   padding: 60px 0 39px;
   width: 100%;
   height: 362px;
@@ -903,16 +904,16 @@ header .header_wrapper .header_menu .header_dial {
   background-color: #f2f2f2;
   border-bottom: 7px solid #f39800;
 }
-.full_width_gray #news-and-topics .home_title {
+.full_width_new_topic #news-and-topics .home_title {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 11px;
 }
-.full_width_gray #news-and-topics .home_title img {
+.full_width_new_topic #news-and-topics .home_title img {
   width: 26px;
 }
-.full_width_gray #news-and-topics .home_title h1 {
+.full_width_new_topic #news-and-topics .home_title h1 {
   font-weight: 400;
   color: #f39800;
   letter-spacing: 3px;
@@ -921,17 +922,17 @@ header .header_wrapper .header_menu .header_dial {
   font-size: 2.375rem;
   line-height: 2.375rem;
 }
-.full_width_gray #news-and-topics ul {
+.full_width_new_topic #news-and-topics ul {
   margin-top: 67px;
 }
-.full_width_gray #news-and-topics ul li {
+.full_width_new_topic #news-and-topics ul li {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.full_width_gray #news-and-topics ul li span {
+.full_width_new_topic #news-and-topics ul li span {
   color: #f39800;
 }
-.full_width_gray #news-and-topics .btn_more {
+.full_width_new_topic #news-and-topics .btn_more {
   font-size: 1.1875rem;
   font-weight: 400;
   line-height: 1.1875rem;
@@ -946,7 +947,7 @@ header .header_wrapper .header_menu .header_dial {
   background-color: transparent;
   border: 0;
 }
-.full_width_gray .absolute_illust {
+.full_width_new_topic .absolute_illust {
   width: 153px;
   position: absolute;
   bottom: 0;
@@ -1025,7 +1026,7 @@ header .header_wrapper .header_menu .header_dial {
   border: 0;
 }
 
-.full_width_image {
+.full_width_recruit {
   width: 100%;
   height: 610px;
   min-height: 610px;
@@ -1033,24 +1034,24 @@ header .header_wrapper .header_menu .header_dial {
   background-size: cover;
   background-position: center;
 }
-.full_width_image #recruit {
+.full_width_recruit #recruit {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.full_width_image #recruit h1 {
+.full_width_recruit #recruit h1 {
   font-size: 2rem;
   font-weight: 500;
   color: white;
 }
-.full_width_image #recruit .recruit_card_list {
+.full_width_recruit #recruit .recruit_card_list {
   margin: 57px 0 35px;
   display: flex;
   justify-content: space-between;
 }
-.full_width_image #recruit .recruit_card_list .recruit_card {
+.full_width_recruit #recruit .recruit_card_list .recruit_card {
   width: 504px;
   height: 301px;
   border-radius: 10px;
@@ -1059,24 +1060,24 @@ header .header_wrapper .header_menu .header_dial {
   grid-template-columns: 1fr 262px;
   overflow: hidden;
 }
-.full_width_image #recruit .recruit_card_list .recruit_card .recruit_card_image_wrapper {
+.full_width_recruit #recruit .recruit_card_list .recruit_card .recruit_card_image_wrapper {
   background-color: #f3f0e9;
 }
-.full_width_image #recruit .recruit_card_list .recruit_card article {
+.full_width_recruit #recruit .recruit_card_list .recruit_card article {
   padding: 30px 46px 0px 21px;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.full_width_image #recruit .recruit_card_list .recruit_card article h4 {
+.full_width_recruit #recruit .recruit_card_list .recruit_card article h4 {
   font-size: 1.3125rem;
   line-height: 1.3125rem;
 }
-.full_width_image #recruit .recruit_card_list .recruit_card article span {
+.full_width_recruit #recruit .recruit_card_list .recruit_card article span {
   color: #f39800;
 }
-.full_width_image #recruit .btn_more {
+.full_width_recruit #recruit .btn_more {
   font-size: 1.1875rem;
   font-weight: 400;
   line-height: 1.1875rem;
@@ -1089,6 +1090,86 @@ header .header_wrapper .header_menu .header_dial {
   text-align: center;
   vertical-align: middle;
   background-color: #f39800;
+}
+
+.full_width_clinic_hours {
+  height: 1053px;
+}
+.full_width_clinic_hours #clinic-hours > img {
+  width: 46px;
+}
+.full_width_clinic_hours #clinic-hours .home_title h1 {
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+}
+.full_width_clinic_hours #clinic-hours .home_title span {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #818181;
+}
+.full_width_clinic_hours #clinic-hours .clinic_hour_time_description {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.full_width_clinic_hours #clinic-hours table {
+  width: calc(100% - 150px);
+  border-collapse: collapse;
+  font-weight: 500;
+}
+.full_width_clinic_hours #clinic-hours table,
+.full_width_clinic_hours #clinic-hours table td,
+.full_width_clinic_hours #clinic-hours table th {
+  border: 1px solid #cccccc;
+}
+.full_width_clinic_hours #clinic-hours table td,
+.full_width_clinic_hours #clinic-hours table th {
+  height: 52px;
+  vertical-align: middle;
+}
+.full_width_clinic_hours #clinic-hours table thead {
+  background-color: #f39800;
+  color: white;
+}
+.full_width_clinic_hours #clinic-hours .clinic_hours_dials {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.full_width_clinic_hours #clinic-hours .clinic_hours_dials .clinic_hours_dials_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  border-bottom: 5px solid #f39800;
+}
+.full_width_clinic_hours #clinic-hours .clinic_hours_dials .clinic_hours_dials_button p {
+  font-size: 1.04rem;
+}
+.full_width_clinic_hours #clinic-hours .clinic_hours_dials .clinic_hours_dials_button h4 {
+  font-size: 2.04rem;
+}
+.full_width_clinic_hours #clinic-hours .btn_kochira {
+  width: 400px;
+  min-width: 400px;
+  padding: 23px 0;
+  margin: 0 auto;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.full_width_clinic_hours #clinic-hours .btn_kochira img {
+  width: 27px;
 }
 
 /*# sourceMappingURL=styles.css.map */
