@@ -9,9 +9,7 @@ body {
   height: 100vh;
   -webkit-text-size-adjust: 100%;
 }
-.font_other {
-  @extend %fontOther;
-}
+
 main {
   margin: 0 auto;
 }
@@ -31,6 +29,7 @@ header {
     max-width: 1296px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     .header_logo {
       width: 161px;
@@ -142,14 +141,14 @@ header {
   margin: auto;
 }
 
-.home_title_big {
-  @include homeTitle("big");
-}
 #about-us {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: $color-font-about-us;
+  .home_title_big {
+    @include homeTitle("orange");
+  }
   .point_card_list {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
@@ -214,8 +213,12 @@ header {
   background-color: $color-inform-backgroudnd-clor;
   position: relative;
   box-shadow: 10px 8px 0px $color-shadow-gray;
+
   .icon_circle {
     @include iconCircle("icon");
+  }
+  .home_title_big {
+    @include homeTitle("orange");
   }
 
   ul {
@@ -233,7 +236,7 @@ header {
     justify-content: space-around;
 
     .btn_kochira {
-      @include btnKochira;
+      @include buttonKochira;
     }
   }
 }
@@ -290,7 +293,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         .home_title_small {
-          @include homeTitle("small");
+          @include homeTitleSmall;
         }
         p {
           word-break: keep-all;
@@ -322,7 +325,68 @@ header {
     background-color: transparent;
     border-radius: inherit;
     .mushiba_border {
+      color: $color-white;
       @include Stripe("border");
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      padding: 42px;
+      .home_title_big {
+        @include homeTitle("white");
+      }
+      .mushiba_border_icon {
+        width: 38px;
+      }
+
+      .btn_more {
+        @include buttonMore("orange");
+      }
+    }
+  }
+}
+
+#album {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  .home_title_big {
+    @include homeTitle("orange");
+    position: relative;
+    img {
+      width: 150px;
+      position: absolute;
+      top: 6px;
+      left: -163px;
+    }
+  }
+  .album_social {
+    @extend %fontOther;
+    font-weight: $font-weight-regular;
+    color: $color-orange;
+    align-self: flex-end;
+    display: flex;
+    gap: 13px;
+
+    .icon_circle {
+      @include iconCircle("social");
+    }
+  }
+
+  .gallery {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    .gallery_image_wrapper {
+      width: 257px;
     }
   }
 }

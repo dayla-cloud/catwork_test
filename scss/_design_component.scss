@@ -1,4 +1,6 @@
 @mixin buttonMore($backgroundColor) {
+  @extend %fontOther;
+
   font-size: $font-size-more;
   font-weight: $font-weight-medium;
   line-height: $font-size-more;
@@ -47,7 +49,7 @@
   }
 }
 
-@mixin btnKochira {
+@mixin buttonKochira {
   width: 400px;
   min-width: 400px;
   padding: 23px 0;
@@ -88,5 +90,55 @@
         black 9px
       )
       10;
+  }
+}
+
+@mixin homeTitle($color) {
+  text-align: center;
+  h1 {
+    @extend %fontOther;
+    font-size: $font-size-section-title;
+    line-height: $font-size-section-title;
+    font-weight: $font-weight-medium;
+    color: $color-orange;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  span {
+    font-size: $font-size-section-subtitle;
+    font-weight: $font-weight-regular;
+  }
+  @if ($color == "orange") {
+    h1 {
+      color: $color-orange;
+    }
+    span {
+      color: $color-font-subtitle;
+    }
+  } @else if($color == "white") {
+    h1 {
+      color: $color-white;
+    }
+    span {
+      color: $color-white;
+    }
+  }
+}
+
+@mixin homeTitleSmall() {
+  h2 {
+    @extend %fontOther;
+    font-size: $font-size-section-title-smaller;
+    line-height: $font-size-section-title-smaller;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    color: $color-orange;
+    letter-spacing: 3px;
+    white-space: nowrap;
+  }
+  span {
+    font-size: $font-size-section-subtitle;
+    font-weight: $font-weight-regular;
+    color: $color-font-subtitle;
   }
 }

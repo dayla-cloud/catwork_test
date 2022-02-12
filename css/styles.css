@@ -329,7 +329,7 @@ body {
   font-weight: 300;
 }
 
-.font_other {
+#album .album_social, #album .home_title_big h1, #mushiba .mushiba_border_wrapper .mushiba_border .btn_more, #mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1, .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small h2, #inform .home_title_big h1, #about-us .btn_more, #about-us .home_title_big h1, #about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-family: "Oswald", sans-serif;
 }
 
@@ -387,7 +387,7 @@ header .header_wrapper .header_menu .header_dial div p {
   padding: 58px 30px;
   text-align: center;
 }
-#about-us .point_card_list .point_card .point_card_balloon span {
+#about-us .point_card_list .point_card .point_card_balloon .point_count {
   font-size: 1.56rem;
   line-height: 1.56rem;
   font-weight: 400;
@@ -400,9 +400,8 @@ header .header_wrapper .header_menu .header_dial div p {
   margin-bottom: 46px;
 }
 #about-us .point_card_list .point_card .point_card_balloon h4 span {
-  text-decoration: underline;
-  text-decoration-color: rgba(243, 152, 0, 0.2);
-  text-decoration-thickness: 6px;
+  font-weight: 500;
+  border-bottom: 6px solid rgba(243, 152, 0, 0.2);
 }
 #about-us .point_card_list .point_card .point_card_balloon p {
   line-height: 1.8125rem;
@@ -439,6 +438,7 @@ header .header_wrapper {
   max-width: 1296px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 header .header_wrapper .header_logo {
@@ -543,26 +543,32 @@ header .header_wrapper .header_menu .header_dial {
   margin: auto;
 }
 
-.home_title_big {
-  text-align: center;
-}
-.home_title_big span {
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: #818181;
-}
-.home_title_big h1 {
-  font-size: 3.9rem;
-  font-weight: 400;
-  color: #f39800;
-  letter-spacing: 3px;
-}
-
 #about-us {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #333333;
+}
+#about-us .home_title_big {
+  text-align: center;
+}
+#about-us .home_title_big h1 {
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#about-us .home_title_big span {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+#about-us .home_title_big h1 {
+  color: #f39800;
+}
+#about-us .home_title_big span {
+  color: #818181;
 }
 #about-us .point_card_list {
   display: grid;
@@ -641,6 +647,27 @@ header .header_wrapper .header_menu .header_dial {
   transform: translate(50% 50%);
   margin-top: -35px;
   margin-left: -35px;
+}
+#inform .home_title_big {
+  text-align: center;
+}
+#inform .home_title_big h1 {
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#inform .home_title_big span {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+#inform .home_title_big h1 {
+  color: #f39800;
+}
+#inform .home_title_big span {
+  color: #818181;
 }
 #inform ul {
   display: grid;
@@ -740,20 +767,19 @@ header .header_wrapper .header_menu .header_dial {
   flex-direction: column;
   justify-content: space-between;
 }
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small {
-  text-align: center;
+.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small h2 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f39800;
+  letter-spacing: 3px;
+  white-space: nowrap;
 }
 .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small span {
   font-size: 0.875rem;
   font-weight: 300;
   color: #818181;
-}
-.full_width_devided #staff-and-schedule .card_stripe .card_stripe_background .home_title_small h2 {
-  font-size: 2.4rem;
-  font-weight: 400;
-  color: #f39800;
-  letter-spacing: 3px;
-  white-space: nowrap;
 }
 .full_width_devided #staff-and-schedule .card_stripe .card_stripe_background p {
   word-break: keep-all;
@@ -783,10 +809,119 @@ header .header_wrapper .header_menu .header_dial {
   border-radius: inherit;
 }
 #mushiba .mushiba_border_wrapper .mushiba_border {
+  color: white;
   width: 100%;
   height: 100%;
   border: 10px solid white;
   border-image: repeating-linear-gradient(-45deg, white 0, white 7px, black 7px, black 9px) 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 42px;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big {
+  text-align: center;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1 {
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big span {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big h1 {
+  color: white;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .home_title_big span {
+  color: white;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .mushiba_border_icon {
+  width: 38px;
+}
+#mushiba .mushiba_border_wrapper .mushiba_border .btn_more {
+  font-size: 1.1875rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
+  width: 299px;
+  min-width: 299px;
+  padding: 16px 0;
+  margin: auto;
+  border: 1px solid #f39800;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #f39800;
+}
+
+#album {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+#album .home_title_big {
+  text-align: center;
+  position: relative;
+}
+#album .home_title_big h1 {
+  font-size: 3.9rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  color: #f39800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#album .home_title_big span {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+#album .home_title_big h1 {
+  color: #f39800;
+}
+#album .home_title_big span {
+  color: #818181;
+}
+#album .home_title_big img {
+  width: 150px;
+  position: absolute;
+  top: 6px;
+  left: -163px;
+}
+#album .album_social {
+  font-weight: 300;
+  color: #f39800;
+  align-self: flex-end;
+  display: flex;
+  gap: 13px;
+}
+#album .album_social .icon_circle {
+  border-radius: 50%;
+  display: flex;
+  place-content: center center;
+  width: 32px;
+  height: 32px;
+  padding: 7px;
+  background-color: #e8e8e8;
+}
+#album .gallery {
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#album .gallery .gallery_image_wrapper {
+  width: 257px;
 }
 
 /*# sourceMappingURL=styles.css.map */

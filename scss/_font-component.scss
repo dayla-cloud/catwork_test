@@ -50,31 +50,6 @@
   }
 }
 
-@mixin homeTitle($size) {
-  text-align: center;
-  span {
-    font-size: $font-size-section-subtitle;
-    font-weight: $font-weight-regular;
-    color: $color-font-subtitle;
-  }
-  @if ($size == "big") {
-    h1 {
-      font-size: $font-size-section-title;
-      font-weight: $font-weight-medium;
-      color: $color-orange;
-      letter-spacing: 3px;
-    }
-  } @else if ($size == "small") {
-    h2 {
-      font-size: $font-size-section-title-smaller;
-      font-weight: $font-weight-medium;
-      color: $color-orange;
-      letter-spacing: 3px;
-      white-space: nowrap;
-    }
-  }
-}
-
 %menuShortcutUnderLP {
   text-align: center;
   text-transform: uppercase;
@@ -90,7 +65,8 @@
   padding: 58px 30px;
   text-align: center;
 
-  span {
+  .point_count {
+    @extend %fontOther;
     font-size: $font-size-point-title-en;
     line-height: $font-size-point-title-en;
     font-weight: $font-weight-medium;
@@ -104,9 +80,8 @@
     margin-bottom: 46px;
 
     span {
-      text-decoration: underline;
-      text-decoration-color: $color-orange-opacity;
-      text-decoration-thickness: 6px;
+      font-weight: $font-weight-bold;
+      border-bottom: 6px solid $color-orange-opacity;
     }
   }
 
