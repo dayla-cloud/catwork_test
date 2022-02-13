@@ -744,7 +744,9 @@ header {
   position: fixed;
   z-index: 1;
   right: 72px;
-  bottom: 194px;
+  bottom: -71px;
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
 footer {
