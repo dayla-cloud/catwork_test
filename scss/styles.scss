@@ -1,7 +1,7 @@
 @import "_reset";
 @import "_variables";
 @import "_design_component";
-@import "font-component";
+@import "font_component";
 
 html {
   scroll-behavior: smooth;
@@ -68,10 +68,7 @@ header {
         gap: 25px;
 
         li {
-          @include headerListStyle("transparent");
-          .headerWhiteBg {
-            @include headerListStyle("white");
-          }
+          @extend %headerListStyle;
           a p:first-child {
             text-decoration: underline transparent;
             text-decoration-thickness: 3px;
@@ -132,7 +129,20 @@ header {
       left: 50%;
       margin-top: 273px;
       transform: translate(50% 50%);
+      animation: movingarrow 2s ease-in-out infinite;
     }
+  }
+}
+
+@keyframes movingarrow {
+  0% {
+    margin-top: 273px;
+  }
+  70% {
+    margin-top: 265px;
+  }
+  100% {
+    margin-top: 273px;
   }
 }
 

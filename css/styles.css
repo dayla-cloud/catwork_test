@@ -338,6 +338,19 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
+header .header_wrapper .header_menu .header_nav ul li a p {
+  color: #ffffff;
+}
+header .header_wrapper .header_menu .header_nav ul li a p:first-child {
+  font-size: 0.825rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+header .header_wrapper .header_menu .header_nav ul li a p:last-child {
+  font-size: 0.625rem;
+  font-weight: 300;
+}
+
 .menu_shortcut ul li {
   text-align: center;
   text-transform: uppercase;
@@ -415,33 +428,6 @@ header .header_wrapper .header_menu .header_nav ul {
   gap: 25px;
 }
 header .header_wrapper .header_menu .header_nav ul li a p:first-child {
-  font-size: 0.825rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-header .header_wrapper .header_menu .header_nav ul li a p:last-child {
-  font-size: 0.625rem;
-  font-weight: 300;
-}
-header .header_wrapper .header_menu .header_nav ul li a p {
-  color: #ffffff;
-}
-header .header_wrapper .header_menu .header_nav ul li .headerWhiteBg a p:first-child {
-  font-size: 0.825rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-header .header_wrapper .header_menu .header_nav ul li .headerWhiteBg a p:last-child {
-  font-size: 0.625rem;
-  font-weight: 300;
-}
-header .header_wrapper .header_menu .header_nav ul li .headerWhiteBg a p:first-child {
-  color: #242424;
-}
-header .header_wrapper .header_menu .header_nav ul li .headerWhiteBg a p:last-child {
-  color: #949494;
-}
-header .header_wrapper .header_menu .header_nav ul li a p:first-child {
   text-decoration: underline transparent;
   text-decoration-thickness: 3px;
   text-underline-offset: 3px;
@@ -517,8 +503,20 @@ header .header_wrapper .header_menu address .header_dial div p {
   left: 50%;
   margin-top: 273px;
   transform: translate(50% 50%);
+  animation: movingarrow 2s ease-in-out infinite;
 }
 
+@keyframes movingarrow {
+  0% {
+    margin-top: 273px;
+  }
+  70% {
+    margin-top: 265px;
+  }
+  100% {
+    margin-top: 273px;
+  }
+}
 .menu_shortcut {
   max-width: 1296px;
   margin: 24px auto 0;
