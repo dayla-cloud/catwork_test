@@ -87,14 +87,12 @@ summary {
 }
 
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -363,12 +361,15 @@ header .header_wrapper {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 header .header_wrapper .header_logo {
@@ -388,12 +389,15 @@ header .header_wrapper .header_menu {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   -webkit-box-align: start;
   -ms-flex-align: start;
+  -webkit-align-items: flex-start;
   align-items: flex-start;
 }
 header .header_wrapper .header_menu .header_nav ul {
@@ -401,6 +405,7 @@ header .header_wrapper .header_menu .header_nav ul {
   margin-top: 11px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   gap: 25px;
 }
@@ -420,6 +425,7 @@ header .header_wrapper .header_menu .header_nav ul li:hover a p:first-child {
 header .header_wrapper .header_menu address {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 header .header_wrapper .header_menu address .header_dial {
@@ -431,6 +437,7 @@ header .header_wrapper .header_menu address .header_dial {
   color: #ffffff;
   text-align: center;
   -ms-flex-item-align: start;
+  -webkit-align-self: flex-start;
   align-self: flex-start;
 }
 header .header_wrapper .header_menu address .header_dial p {
@@ -440,12 +447,15 @@ header .header_wrapper .header_menu address .header_dial p {
 header .header_wrapper .header_menu address .header_dial div {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   gap: 7px;
 }
@@ -472,6 +482,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(50% 50%);
+  -ms-transform: translate(50% 50%);
   transform: translate(50% 50%);
   margin-left: -259.5px;
   margin-top: -88.5px;
@@ -493,6 +504,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   left: 50%;
   margin-top: 273px;
   -webkit-transform: translate(50% 50%);
+  -ms-transform: translate(50% 50%);
   transform: translate(50% 50%);
   -webkit-animation: movingArrow 2s ease-in-out infinite;
   animation: movingArrow 2s ease-in-out infinite;
@@ -529,12 +541,15 @@ header .header_wrapper .header_menu address .header_dial div p {
 .menu_shortcut ul {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 20px;
 }
@@ -552,6 +567,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   gap: 10px;
 }
@@ -559,6 +575,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   place-content: center center;
   width: 32px;
@@ -574,13 +591,16 @@ header .header_wrapper .header_menu address .header_dial div p {
   padding: 91px 0 118px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   color: #333333;
 }
@@ -607,6 +627,7 @@ header .header_wrapper .header_menu address .header_dial div p {
 }
 #about-us .point_card_list .point_card {
   -ms-flex-item-align: center;
+  -webkit-align-self: center;
   align-self: center;
   justify-self: center;
   position: relative;
@@ -617,10 +638,12 @@ header .header_wrapper .header_menu address .header_dial div p {
   background-image: url(../asset/SVG/illu-point.svg);
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   padding: 58px 30px;
   text-align: center;
@@ -692,23 +715,26 @@ header .header_wrapper .header_menu address .header_dial div p {
   padding: 43px 82px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   background-color: #f2f2f2;
   position: relative;
-  -webkit-box-shadow: 10px 8px 0px #d9d9d9;
   box-shadow: 10px 8px 0px #d9d9d9;
 }
 #inform .icon_circle {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   place-content: center center;
   width: 70px;
@@ -719,6 +745,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   top: 0;
   left: 50%;
   -webkit-transform: translate(50% 50%);
+  -ms-transform: translate(50% 50%);
   transform: translate(50% 50%);
   margin-top: -35px;
   margin-left: -35px;
@@ -748,8 +775,10 @@ header .header_wrapper .header_menu address .header_dial div p {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
 }
 #inform .btns .btn_kochira {
@@ -763,12 +792,15 @@ header .header_wrapper .header_menu address .header_dial div p {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 13px;
   font-weight: 500;
@@ -801,16 +833,20 @@ header .header_wrapper .header_menu address .header_dial div p {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(50% 50%);
+  -ms-transform: translate(50% 50%);
   transform: translate(50% 50%);
   margin-top: -285px;
   margin-left: -540px;
@@ -830,6 +866,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   place-content: center center;
   width: 70px;
@@ -840,6 +877,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   top: 0;
   left: 50%;
   -webkit-transform: translate(50% 50%);
+  -ms-transform: translate(50% 50%);
   transform: translate(50% 50%);
   margin-top: -35px;
   margin-left: -35px;
@@ -851,13 +889,16 @@ header .header_wrapper .header_menu address .header_dial div p {
   padding: 60px 0;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .full_width_staff_schedule #staff-and-schedule .card_stripe .card_stripe_background .home_title h1 {
@@ -910,16 +951,20 @@ header .header_wrapper .header_menu address .header_dial div p {
   border-image: repeating-linear-gradient(-45deg, #ffffff 0, #ffffff 7px, black 7px, black 9px) 10;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 22px;
   padding: 42px;
@@ -961,16 +1006,20 @@ header .header_wrapper .header_menu address .header_dial div p {
   padding: 130px 0 93px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 15px;
 }
@@ -1001,9 +1050,11 @@ header .header_wrapper .header_menu address .header_dial div p {
   font-weight: 300;
   color: #f39800;
   -ms-flex-item-align: end;
+  -webkit-align-self: flex-end;
   align-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   gap: 13px;
 }
@@ -1011,6 +1062,7 @@ header .header_wrapper .header_menu address .header_dial div p {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   place-content: center center;
   width: 32px;
@@ -1022,12 +1074,15 @@ header .header_wrapper .header_menu address .header_dial div p {
   width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 16px;
 }
@@ -1045,12 +1100,15 @@ header .header_wrapper .header_menu address .header_dial div p {
 .full_width_new_topic #news-and-topics .home_title {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   gap: 11px;
 }
@@ -1105,12 +1163,15 @@ header .header_wrapper .header_menu address .header_dial div p {
 #blog .home_title {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   gap: 11px;
 }
@@ -1136,6 +1197,7 @@ header .header_wrapper .header_menu address .header_dial div p {
 #blog ul li {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   gap: 13px;
 }
@@ -1190,13 +1252,16 @@ header .header_wrapper .header_menu address .header_dial div p {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 .full_width_recruit #recruit h1 {
@@ -1208,9 +1273,11 @@ header .header_wrapper .header_menu address .header_dial div p {
   margin: 57px 0 35px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .full_width_recruit #recruit .recruit_card_list .recruit_card {
@@ -1230,10 +1297,12 @@ header .header_wrapper .header_menu address .header_dial div p {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
+  -webkit-flex-direction: column;
   flex-direction: column;
   gap: 28px;
 }
@@ -1337,22 +1406,28 @@ header .header_wrapper .header_menu address .header_dial div p {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 .full_width_clinic_hours #clinic-hours .clinic_hours_dials .clinic_hours_dials_button {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 38px;
   border-bottom: 5px solid #f39800;
@@ -1376,12 +1451,15 @@ header .header_wrapper .header_menu address .header_dial div p {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   gap: 13px;
   font-weight: 500;
@@ -1433,17 +1511,20 @@ header .header_wrapper .header_menu address .header_dial div p {
 #access .access_information .access_information_description .access_information_description_transport {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   margin-bottom: 22px;
   gap: 12px;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 #access .access_information .access_information_description .access_information_description_transport .icon_circle {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   place-content: center center;
   width: 87px;
@@ -1481,9 +1562,11 @@ footer img {
 footer nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
   justify-content: space-evenly;
   margin-bottom: 47px;
   font-size: 0.9372rem;
