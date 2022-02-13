@@ -1,3 +1,84 @@
+@mixin headerDial {
+  margin-left: 15px;
+  width: 195px;
+  height: 63px;
+  background-color: $color-orange;
+  border-radius: 0 0 15px 15px;
+  color: $color-white;
+  text-align: center;
+  p {
+    font-size: $font-size-header-dial-jp;
+    font-weight: $font-weight-medium;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    img {
+      width: 17px;
+      height: 17px;
+    }
+    p {
+      font-size: $font-size-header-dial-numb;
+    }
+  }
+}
+
+@mixin clinicHoursDial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 38px;
+  border-bottom: 5px solid $color-orange;
+  p {
+    font-size: $font-size-clinichours-dial-jp;
+    font-weight: $font-weight-medium;
+  }
+  h4 {
+    font-size: $font-size-clinichours-dial-numb;
+    font-weight: $font-weight-medium;
+  }
+}
+
+@mixin pointBalloon {
+  width: 394px;
+  height: 394px;
+  background-image: url(../asset/SVG/illu-point.svg);
+  display: flex;
+  flex-direction: column;
+  padding: 58px 30px;
+  text-align: center;
+
+  .point_count {
+    @extend %fontOther;
+    font-size: $font-size-point-title-en;
+    line-height: $font-size-point-title-en;
+    font-weight: $font-weight-medium;
+    margin-bottom: 54px;
+  }
+
+  h4 {
+    font-size: $font-size-point-title-jp;
+    line-height: $font-size-point-title-jp;
+    font-weight: $font-weight-bold;
+    margin-bottom: 46px;
+
+    span {
+      font-weight: $font-weight-bold;
+      border-bottom: 6px solid $color-orange-opacity;
+    }
+  }
+
+  p {
+    line-height: $font-line-height-normal;
+    max-width: 270px;
+    display: block;
+    margin: auto;
+  }
+}
+
 @mixin buttonMore($backgroundColor) {
   @extend %fontOther;
   font-size: $font-size-more;
@@ -64,6 +145,7 @@
   justify-content: center;
   align-items: center;
   gap: 13px;
+  font-weight: $font-weight-bold;
   img {
     width: 27px;
   }
@@ -95,36 +177,10 @@
   }
 }
 
-@mixin homeTitle($size) {
-  @extend %fontOther;
-  font-weight: $font-weight-medium;
-  color: $color-orange;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 9px;
-  @if ($size == "big") {
-    font-size: $font-size-section-title-biggest;
-    line-height: $font-size-section-title-biggest;
-  } @else if ($size == "big_white") {
-    font-size: $font-size-section-title-biggest;
-    line-height: $font-size-section-title-biggest;
-    color: $color-white;
-  } @else if($size == "normal") {
-    font-size: $font-size-section-title-normal;
-    line-height: $font-size-section-title-normal;
-  } @else if($size == "small") {
-    font-size: $font-size-section-title-smallest;
-    line-height: $font-size-section-title-smallest;
-  }
-}
-
-@mixin homeSubtitle($color) {
-  font-size: $font-size-section-subtitle;
-  font-weight: $font-weight-regular;
-
-  @if ($color == "gray") {
-    color: $color-font-subtitle;
-  } @else if ($color == "white") {
-    color: $color-white;
+@mixin linkHoverUnderline {
+  text-decoration: underline transparent;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: underline;
   }
 }

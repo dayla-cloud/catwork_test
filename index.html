@@ -8,10 +8,10 @@
     <title>Catwork Test : Kim Sooyeon</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="header_wrapper">
         <a href="./index.html" class="header_logo">
-          <img src="./asset/SVG/logo-orange.svg" alt="" />
+          <img src="./asset/SVG/logo-white.svg" alt="ロゴ" />
         </a>
         <div class="header_menu">
           <nav class="header_nav">
@@ -60,25 +60,27 @@
               </li>
             </ul>
           </nav>
-          <a class="header_dial" href="tel:+81052-0000-000">
-            <p class="header_dial_title">診療専用ダイアル</p>
-            <div class="header_dial_call">
-              <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
-              <p>052-000-000</p>
-            </div>
-          </a>
-          <a class="header_dial" href="tel:+81052-0000-000">
-            <p>インプラント専用ダイアル</p>
-            <div>
-              <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
-              <p>052-000-000</p>
-            </div>
-          </a>
+          <address>
+            <a class="header_dial" href="tel:+81052-0000-000">
+              <p class="header_dial_title">診療専用ダイアル</p>
+              <div class="header_dial_call">
+                <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
+                <p>052-000-000</p>
+              </div>
+            </a>
+            <a class="header_dial" href="tel:+81052-0000-000">
+              <p>インプラント専用ダイアル</p>
+              <div>
+                <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
+                <p>052-000-000</p>
+              </div>
+            </a>
+          </address>
         </div>
       </div>
     </header>
     <main>
-      <div class="landing_page_wrapper">
+      <div class="landing_page_wrapper" id="landing-page">
         <div class="landing_page_logo">
           <img src="./asset/SVG/logo-white.svg" alt="ロゴ" />
           <p>あなたの大切な歯の健康を守りたい</p>
@@ -91,8 +93,7 @@
       </div>
       <nav class="menu_shortcut">
         <ul>
-          <li><a href="#">DOCIOR</a></li>
-          <li><a href="#">SCHEDULE</a></li>
+          <li><a href="#">DOCIOR SCHEDULE</a></li>
           <li><a href="#">STAFF</a></li>
           <li><a href="#">ALBUM</a></li>
           <li><a href="#">NEWS&TOPICS</a></li>
@@ -245,7 +246,7 @@
               <span>虫歯治療のご案内</span>
             </div>
             <img
-              class="mushiba_border_icon"
+              class="mushiba_illust"
               src="./asset/SVG/icon-scis.svg"
               alt=""
             />
@@ -398,6 +399,7 @@
           <div class="home_title">
             <h1>CLINIC HOURS</h1>
             <span>診療時間</span>
+            <img src="./asset/SVG/illu-cat-seat.svg" alt="ネコイラスト" />
           </div>
           <p class="clinic_hours_time_description">
             午前 / 9:30 ~ 12:00　　午後 / 16:30 ~ 19:30（休診 ：火曜日）<br /><br />
@@ -446,7 +448,7 @@
             </tbody>
           </table>
 
-          <div class="clinic_hours_dials">
+          <address class="clinic_hours_dials">
             <a class="clinic_hours_dials_button" href="tel:+81052-0000-000"
               ><p>診療専用ダイヤル</p>
               <h4>TEL.052-000-000</h4></a
@@ -455,7 +457,7 @@
               ><p>インプラント専用</p>
               <h4>TEL.052-000-000</h4></a
             >
-          </div>
+          </address>
           <a href="#" class="btn_kochira">
             <img src="./asset/SVG/icon-mail.svg" alt="メールイラスト" />
             メールでのお問い合わせはこちら</a
@@ -526,5 +528,7 @@
       </footer>
     </main>
     <script src="./js/table.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/pageUp.js"></script>
   </body>
 </html>

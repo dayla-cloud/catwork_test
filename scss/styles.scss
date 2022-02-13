@@ -3,6 +3,9 @@
 @import "_design_component";
 @import "font-component";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   @extend %fontNormal;
   width: 100%;
@@ -14,9 +17,17 @@ body {
 main {
   margin: 0 auto;
 }
+.container {
+  max-width: $web-container;
+  margin: auto;
+}
+.full_width {
+  width: 100%;
+}
 a {
   color: $color-font-body;
 }
+
 header {
   width: 100%;
   height: 83px;
@@ -25,7 +36,7 @@ header {
   right: 0;
   z-index: 99;
   position: fixed;
-  background-color: $color-white;
+  transition: all 0.3s ease;
   .header_wrapper {
     max-width: 1296px;
     margin: 0 auto;
@@ -57,13 +68,31 @@ header {
         gap: 25px;
 
         li {
-          @extend %headerMenu;
+          @include headerListStyle("transparent");
+          .headerWhiteBg {
+            @include headerListStyle("white");
+          }
+          a p:first-child {
+            text-decoration: underline transparent;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 3px;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+          }
+          &:hover {
+            a p:first-child {
+              text-decoration-color: $color-orange;
+            }
+          }
         }
       }
 
-      .header_dial {
-        @extend %headerDial;
-        align-self: flex-start;
+      address {
+        display: flex;
+        .header_dial {
+          @include headerDial;
+          align-self: flex-start;
+        }
       }
     }
   }
@@ -119,6 +148,9 @@ header {
     gap: 20px;
     li {
       @extend %menuShortcutUnderLP;
+      a {
+        @include linkHoverUnderline;
+      }
     }
   }
 
@@ -134,11 +166,6 @@ header {
       }
     }
   }
-}
-
-.container {
-  max-width: $web-container;
-  margin: auto;
 }
 
 #about-us {
@@ -166,7 +193,7 @@ header {
       justify-self: center;
       position: relative;
       .point_card_balloon {
-        @extend %pointBalloon;
+        @include pointBalloon;
       }
       img {
         position: absolute;
@@ -251,7 +278,6 @@ header {
 }
 
 .full_width_staff_schedule {
-  width: 100%;
   height: 570px;
   min-height: 570px;
   max-height: 570px;
@@ -338,8 +364,8 @@ header {
     border-radius: inherit;
     .mushiba_border {
       color: $color-white;
-      @include Stripe("border");
       border: 10px solid $color-white;
+      @include Stripe("border");
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -354,7 +380,7 @@ header {
           @include homeSubtitle("white");
         }
       }
-      .mushiba_border_icon {
+      .mushiba_illust {
         width: 38px;
       }
 
@@ -415,7 +441,6 @@ header {
 
 .full_width_new_topic {
   padding: 60px 0 39px;
-  width: 100%;
   height: 362px;
   position: relative;
   background-color: $color-inform-news-backgroudnd-clor;
@@ -517,7 +542,6 @@ header {
 }
 
 .full_width_recruit {
-  width: 100%;
   height: 610px;
   min-height: 610px;
   background-image: url(../asset/png/recruit.png);
@@ -586,11 +610,18 @@ header {
     }
 
     .home_title {
+      position: relative;
       h1 {
         @include homeTitle("big");
       }
       span {
         @include homeSubtitle("gray");
+      }
+      img {
+        width: 111px;
+        position: absolute;
+        top: -14px;
+        right: 240px;
       }
     }
     .clinic_hours_time_description {
@@ -602,10 +633,10 @@ header {
       margin: 0 auto;
       width: calc(100% - 150px);
       border-collapse: collapse;
-      font-weight: $font-weight-bold;
       caption {
         margin-top: 37px;
         caption-side: bottom;
+        font-weight: $font-weight-regular;
       }
       &,
       td,
@@ -616,6 +647,7 @@ header {
       th {
         height: 52px;
         vertical-align: middle;
+        font-weight: $font-weight-bold;
       }
       thead {
         background-color: $color-orange;
@@ -633,17 +665,7 @@ header {
       justify-content: space-around;
       align-items: center;
       .clinic_hours_dials_button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 38px;
-        border-bottom: 5px solid $color-orange;
-        p {
-          font-size: $font-size-clinichours-dial-jp;
-        }
-        h4 {
-          font-size: $font-size-clinichours-dial-numb;
-        }
+        @include clinicHoursDial;
       }
     }
     .btn_kochira {
@@ -698,7 +720,7 @@ header {
 
 #google-map {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
 }
 
 #btn-page-top {
@@ -709,7 +731,7 @@ header {
   font-size: $font-size-page-top;
   font-weight: $font-weight-bold;
   border: 0;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   right: 72px;
   bottom: 194px;
@@ -725,6 +747,9 @@ footer {
     justify-content: space-evenly;
     margin-bottom: 47px;
     font-size: $font-size-footer-menu;
+    a {
+      @include linkHoverUnderline;
+    }
   }
   small {
     display: block;
