@@ -7,7 +7,6 @@ function scrollUp() {
 
 function showBtnPageUp() {
   const currentScrollLocation = window.scrollY;
-  console.log(currentScrollLocation);
   if (currentScrollLocation >= landingPageHalfHeight) {
     btnPageUp.style.bottom = "194px";
     btnPageUp.style.opacity = "1";
