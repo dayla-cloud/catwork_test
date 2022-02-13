@@ -13,5 +13,5 @@ gulp.task("default", function () {
         }),
       ])
     )
-    .pipe(gulp.dest("finalStylesCss"));
+    .pipe(gulp.dest("css"));
 });
