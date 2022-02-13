@@ -503,10 +503,10 @@ header .header_wrapper .header_menu address .header_dial div p {
   left: 50%;
   margin-top: 273px;
   transform: translate(50% 50%);
-  animation: movingarrow 2s ease-in-out infinite;
+  animation: movingArrow 2s ease-in-out infinite;
 }
 
-@keyframes movingarrow {
+@keyframes movingArrow {
   0% {
     margin-top: 273px;
   }

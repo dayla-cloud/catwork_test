@@ -1,0 +1,25 @@
+{
+  "name": "catwork_test",
+  "version": "1.0.0",
+  "description": "#22.02.11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dayla-cloud/catwork_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dayla-cloud/catwork_test/issues"
+  },
+  "homepage": "https://github.com/dayla-cloud/catwork_test#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1"
+  }
+}
