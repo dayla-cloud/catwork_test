@@ -1,18 +1,12 @@
 {
   "name": "catwork_test",
   "version": "1.0.0",
-  "description": "#22.02.11",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Catwork Inc. Code Test for 3days",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dayla-cloud/catwork_test.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "DAYLA",
   "bugs": {
     "url": "https://github.com/dayla-cloud/catwork_test/issues"
   },
