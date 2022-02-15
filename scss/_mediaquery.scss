@@ -1,15 +1,19 @@
-$min-mobile: 320px;
-$max-mobile: 414px;
+$min-mobile: 270px;
+$max-mobile: 425px;
 $min-tablet: $max-mobile + 1;
 $max-tablet: 1230px;
 
 @mixin responsive($deviceSize) {
   @if $deviceSize == "mobile" {
-    @media srceen and (min-width: $min-mobile) and(max-width: $max-mobile) {
+    @media screen and (min-width: $min-mobile) and(max-width: $max-mobile) {
       @content;
     }
   } @else if $deviceSize == "tablet" {
     @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+      @content;
+    }
+  } @else if $deviceSize == "" {
+    @media screen and (min-width: $min-mobile) and (max-width: $max-tablet) {
       @content;
     }
   }

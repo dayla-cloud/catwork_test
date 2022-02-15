@@ -48,6 +48,10 @@
   @if ($size == "big") {
     font-size: $font-size-section-title-biggest;
     line-height: $font-size-section-title-biggest;
+    @include responsive("mobile") {
+      font-size: $font-size-section-title-smallest;
+      line-height: $font-size-section-title-smallest;
+    }
   } @else if ($size == "big_white") {
     font-size: $font-size-section-title-biggest;
     line-height: $font-size-section-title-biggest;

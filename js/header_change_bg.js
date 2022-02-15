@@ -24,7 +24,7 @@ function desktopWhite_CLASSNAMEBg() {
 }
 function desktopTransparentBg() {
   header.style.backgroundColor = "transparent";
-  logoWrapper.style.backgroundImage = `url(./asset/SVG/logo-white_CLASSNAME.svg)`;
+  logoWrapper.style.backgroundImage = `url(./asset/SVG/logo-white.svg)`;
   for (let i = 0; i < headerListUpper.length; i++) {
     headerListUpper[i].style.color = WHITE_CLASSNAME;
     headerListDown[i].style.color = WHITE_CLASSNAME;
@@ -52,20 +52,23 @@ function handleDesktopHeader() {
 function handleMobileHeader() {
   const currentScrollLocation =
     window.scrollY || document.documentElement.scrollTop;
-  if (currentScrollLocation > lastScrollY) {
-    header.style.top = "-100%";
-  } else {
+  if (currentScrollLocation < lastScrollY || currentScrollLocation === 0) {
     header.style.top = "0";
     mobileWhite_CLASSNAMEBg();
+  } else if (
+    currentScrollLocation > lastScrollY ||
+    currentScrollLocation !== 0
+  ) {
+    header.style.top = "-100%";
   }
 }
 
 function handleHeaderBgColor() {
   const currentDeviceWidth = window.screen.width;
-  const currentWindowWidth = window.innerWidth;
-  if (currentDeviceWidth >= 1230 || currentWindowWidth >= 1230) {
+  const currentInnerWidth = window.innerWidth;
+  if (currentDeviceWidth >= 1230 || currentInnerWidth >= 1230) {
     handleDesktopHeader();
-  } else {
+  } else if (currentDeviceWidth < 1230 || currentInnerWidth < 1230) {
     handleMobileHeader();
   }
   lastScrollY = window.scrollY;
@@ -73,3 +76,14 @@ function handleHeaderBgColor() {
 
 window.addEventListener("scroll", handleHeaderBgColor);
 window.addEventListener("resize", handleHeaderBgColor);
+
+let scrolling = false;
+document.addEventListener("touchstart", function (e) {
+  scrolling = false;
+});
+document.addEventListener("touchmove", function (e) {
+  scrolling = false;
+});
+document.addEventListener("touchend", function (e) {
+  scrolling = false;
+});
