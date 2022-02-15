@@ -8,10 +8,10 @@ function scrollUp() {
 function showBtnPageUp() {
   const currentScrollLocation = window.scrollY;
   if (currentScrollLocation >= landingPageHalfHeight) {
-    btnPageUp.style.bottom = "194px";
+    btnPageUp.style.bottom = "10%";
     btnPageUp.style.opacity = "1";
   } else {
-    btnPageUp.style.bottom = "-71px";
+    btnPageUp.style.bottom = "-100%";
     btnPageUp.style.opacity = "0";
   }
 }

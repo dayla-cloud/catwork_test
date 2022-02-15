@@ -26,6 +26,27 @@
   }
 }
 
+@mixin headerDialMobile {
+  margin-left: 0;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 130px;
+  background-color: $color-orange;
+  border-radius: 0;
+  padding: 10px;
+  color: $color-white;
+  p {
+    font-size: 0.8rem;
+    font-weight: $font-weight-medium;
+    writing-mode: vertical-rl;
+    word-break: normal;
+    margin: auto;
+  }
+  div {
+    display: none;
+  }
+}
+
 @mixin clinicHoursDial {
   display: flex;
   justify-content: space-between;

@@ -10,74 +10,84 @@
   <body>
     <header id="header">
       <div class="header_wrapper">
-        <a href="./index.html" class="header_logo">
-          <img src="./asset/SVG/logo-white.svg" alt="ロゴ" />
-        </a>
-        <div class="header_menu">
-          <nav class="header_nav">
-            <ul>
-              <li>
-                <a href="#">
-                  <p>first</p>
-                  <p>初めての方へ</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>about us</p>
-                  <p>当院のご紹介</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>information</p>
-                  <p>診療案内</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>implant</p>
-                  <p>インプラント</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>recruit</p>
-                  <p>採用情報</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>clinic hours</p>
-                  <p>診療時間</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <p>contact</p>
-                  <p>お問い合わせ</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <address>
-            <a class="header_dial" href="tel:+81052-0000-000">
-              <p class="header_dial_title">診療専用ダイアル</p>
-              <div class="header_dial_call">
-                <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
-                <p>052-000-000</p>
-              </div>
-            </a>
-            <a class="header_dial" href="tel:+81052-0000-000">
-              <p>インプラント専用ダイアル</p>
-              <div>
-                <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
-                <p>052-000-000</p>
-              </div>
-            </a>
-          </address>
-        </div>
+        <a href="./index.html" class="header_logo" id="header-logo"
+          ><div class="header_logo_wrapper" id="logo-wrapper"></div
+        ></a>
+        <nav id="header-nav" class="header_nav">
+          <ul>
+            <li>
+              <a href="#">
+                <p>first</p>
+                <p>初めての方へ</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>about us</p>
+                <p>当院のご紹介</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>information</p>
+                <p>診療案内</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>implant</p>
+                <p>インプラント</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>recruit</p>
+                <p>採用情報</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>clinic hours</p>
+                <p>診療時間</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p>contact</p>
+                <p>お問い合わせ</p>
+              </a>
+            </li>
+          </ul>
+          <img
+            id="menu-close"
+            class="menu_close"
+            src="./asset/SVG/close-fill.svg"
+            alt="メニュー"
+          />
+        </nav>
+        <address>
+          <a class="header_dial" href="tel:+81052-0000-000">
+            <p class="header_dial_title">診療専用ダイアル</p>
+            <div class="header_dial_call">
+              <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
+              <p>052-000-000</p>
+            </div>
+          </a>
+          <a class="header_dial" href="tel:+81052-0000-000">
+            <p>インプラント専用ダイアル</p>
+            <div>
+              <img src="./asset/SVG/icon-call-w.svg" alt="電話アイコン" />
+              <p>052-000-000</p>
+            </div>
+          </a>
+        </address>
       </div>
+      <img
+        id="menu-open"
+        class="menu_open"
+        src="./asset/SVG/menu-line.svg"
+        alt="メニュー"
+      />
     </header>
     <main>
       <div class="landing_page_wrapper" id="landing-page">
@@ -237,27 +247,29 @@
         <div class="full_width_devided_background_left"></div>
         <div class="full_width_devided_background_right"></div>
       </div>
-      <section class="container" id="mushiba">
-        <div class="mushiba_img_wrapper"></div>
-        <div class="mushiba_border_wrapper">
-          <div class="mushiba_border">
-            <div class="home_title">
-              <h1>MUSHIBA</h1>
-              <span>虫歯治療のご案内</span>
+      <div>
+        <section class="container" id="mushiba">
+          <div class="mushiba_img_wrapper"></div>
+          <div class="mushiba_border_wrapper">
+            <div class="mushiba_border">
+              <div class="home_title">
+                <h1>MUSHIBA</h1>
+                <span>虫歯治療のご案内</span>
+              </div>
+              <img
+                class="mushiba_illust"
+                src="./asset/SVG/icon-scis.svg"
+                alt=""
+              />
+              <p>
+                当サロンは予約制になっております。<br />
+                虫歯治療の混雑解消のため、事前にご予約下さい。
+              </p>
+              <a href="#" class="btn_more">READ MORE → </a>
             </div>
-            <img
-              class="mushiba_illust"
-              src="./asset/SVG/icon-scis.svg"
-              alt=""
-            />
-            <p>
-              当サロンは予約制になっております。<br />
-              虫歯治療の混雑解消のため、事前にご予約下さい。
-            </p>
-            <a href="#" class="btn_more">READ MORE → </a>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="container" id="album">
         <div class="home_title">
           <h1>ALBUM</h1>
@@ -529,8 +541,9 @@
         >
       </footer>
     </main>
+    <script src="./js/menu_toggle.js"></script>
     <script src="./js/table.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/pageUp.js"></script>
+    <script src="./js/header_change_bg.js"></script>
+    <script src="./js/page_up.js"></script>
   </body>
 </html>

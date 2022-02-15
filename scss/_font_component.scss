@@ -8,10 +8,7 @@
   font-family: "Oswald", sans-serif;
 }
 
-%headerListStyle {
-  a p {
-    color: $color-white;
-  }
+@mixin headerListStyle($backgroundColor) {
   a p:first-child {
     font-size: $font-size-header-en;
     font-weight: $font-weight-medium;
@@ -20,6 +17,18 @@
   a p:last-child {
     font-size: $font-size-header-jp;
     font-weight: $font-weight-regular;
+  }
+  @if $backgroundColor == "transparent" {
+    a p {
+      color: $color-white;
+    }
+  } @else if $backgroundColor == "white" {
+    a p:first-child {
+      color: $color-font-header-en;
+    }
+    a p:last-child {
+      color: $color-font-header-jp;
+    }
   }
 }
 
