@@ -9,16 +9,16 @@ const headerListDown = document.querySelectorAll(
 const logoWrapper = document.getElementById("logo-wrapper");
 const currentDeviceWidth = window.screen.width;
 const WHITE_CLASSNAME = "#ffffff";
-const ORANGE_CLASSNAME = "#242424";
+const BLACK_CLASSNAME = "#242424";
 const GREY_CLASSNAME = "#949494";
 
 let lastScrollY = 0;
 
-function desktopWhite_CLASSNAMEBg() {
+function desktopWhiteBg() {
   header.style.backgroundColor = WHITE_CLASSNAME;
   logoWrapper.style.backgroundImage = `url(./asset/SVG/logo-orange.svg)`;
   for (let i = 0; i < headerListUpper.length; i++) {
-    headerListUpper[i].style.color = ORANGE_CLASSNAME;
+    headerListUpper[i].style.color = BLACK_CLASSNAME;
     headerListDown[i].style.color = GREY_CLASSNAME;
   }
 }
@@ -31,11 +31,11 @@ function desktopTransparentBg() {
   }
 }
 
-function mobileWhite_CLASSNAMEBg() {
+function mobileWhiteBg() {
   header.style.backgroundColor = WHITE_CLASSNAME;
   logoWrapper.style.backgroundImage = `url(./asset/SVG/logo-orange.svg)`;
   for (let i = 0; i < headerListUpper.length; i++) {
-    headerListUpper[i].style.color = ORANGE_CLASSNAME;
+    headerListUpper[i].style.color = BLACK_CLASSNAME;
     headerListDown[i].style.color = GREY_CLASSNAME;
   }
 }
@@ -43,7 +43,7 @@ function handleDesktopHeader() {
   const currentScrollLocation =
     window.scrollY || document.documentElement.scrollTop;
   if (currentScrollLocation !== 0) {
-    desktopWhite_CLASSNAMEBg();
+    desktopWhiteBg();
   } else if (currentScrollLocation === 0) {
     desktopTransparentBg();
   }
@@ -54,7 +54,7 @@ function handleMobileHeader() {
     window.scrollY || document.documentElement.scrollTop;
   if (currentScrollLocation < lastScrollY || currentScrollLocation === 0) {
     header.style.top = "0";
-    mobileWhite_CLASSNAMEBg();
+    mobileWhiteBg();
   } else if (
     currentScrollLocation > lastScrollY ||
     currentScrollLocation !== 0
@@ -76,14 +76,3 @@ function handleHeaderBgColor() {
 
 window.addEventListener("scroll", handleHeaderBgColor);
 window.addEventListener("resize", handleHeaderBgColor);
-
-let scrolling = false;
-document.addEventListener("touchstart", function (e) {
-  scrolling = false;
-});
-document.addEventListener("touchmove", function (e) {
-  scrolling = false;
-});
-document.addEventListener("touchend", function (e) {
-  scrolling = false;
-});
