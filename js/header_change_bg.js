@@ -64,11 +64,10 @@ function handleMobileHeader() {
 }
 
 function handleHeaderBgColor() {
-  const currentDeviceWidth = window.screen.width;
-  const currentInnerWidth = window.innerWidth;
-  if (currentDeviceWidth >= 1230 || currentInnerWidth >= 1230) {
+  let currentInnerWidth = window.innerWidth;
+  if (currentInnerWidth >= 1230) {
     handleDesktopHeader();
-  } else if (currentDeviceWidth < 1230 || currentInnerWidth < 1230) {
+  } else if (currentInnerWidth < 1230) {
     handleMobileHeader();
   }
   lastScrollY = window.scrollY;
